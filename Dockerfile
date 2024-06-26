@@ -3,9 +3,6 @@ FROM node:14
 
 # Set the working directory in the container
 WORKDIR /app
-COPY package*.json ./
-RUN npm install
-COPY . .
 
 # Install Git (to fetch code from GitHub)
 RUN apt-get update && apt-get install -y git
@@ -19,5 +16,7 @@ RUN npm install --only=production
 # Expose the port on which the application will run
 EXPOSE 3000
 
+# Define the command to run the application
 CMD ["node", "main.js"]
+
 
