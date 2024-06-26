@@ -18,7 +18,6 @@ RUN npm install --only=production
 
 # Expose the port on which the application will run
 EXPOSE 3000
+
 CMD ["node", "main.js"]
 
-# Command to run the application
-CMD ["node", "main.js"]
